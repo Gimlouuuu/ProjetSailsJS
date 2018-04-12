@@ -6,3 +6,11 @@ aside > h4 {
     display: inline-block;
     color: blue;
 }
+
+
+.blanc{background-color: white;}
+.vert{background-color: green;}
+.rouge{background-color: red;}
+
+.menuOpen{display: block;}
+.menuClose{display: none;}

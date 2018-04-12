@@ -13,6 +13,7 @@ function init() {
     defTitre3();
     datemodif();
     horloge.innerHTML = hour();
+    document.getElementById('input1ID').addEventListener('input',changeColor);
 }
 
 function defTitre1() {
@@ -106,6 +107,37 @@ function majGrafH() {
     }
 }
 
-function menu() {
-    
+// var lebody;
+// function getByValue() {
+//     lebody = document.body.innerHTML;
+//     console.log(lebody);
+//     var x = document.createElement("p");
+//     var t = document.createTextNode("This is a paragraph.");
+//     x.appendChild(t);
+//     document.body.appendChild(x);
+//     x.innerHTML = "<div>div javascript</div>";
+//     console.log(document.body);
+//     console.log(lebody);
+// }
+
+function changeColor() {
+    if (this.value == ""){
+        this.setAttribute("class","blanc");
+    } else if (isNaN(this.value)) {
+        this.setAttribute("class","rouge");
+    } else {
+        this.setAttribute("class","vert");
+    }
+}
+
+var menuopen=false;
+function menuDeroul() {
+    var menu = document.getElementById("menu1");
+    if (menuopen) {
+        menu.setAttribute("class","menuClose");
+        menuopen=false;
+    } else {
+        menu.setAttribute("class","menuOpen");
+        menuopen=true;
+    }
 }
