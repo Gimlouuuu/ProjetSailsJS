@@ -1,8 +1,8 @@
 document.querySelector('body').onload = init;
 
-var pageTitle = document.getElementsByTagName('title')[0];
-var name = 'Remy Aune';
-var horloge = document.getElementById("horloge");
+const pageTitle = document.getElementsByTagName('title')[0];
+const name = 'Remy Aune';
+const horloge = document.getElementById("horloge");
 
 function hour() {
     var date = new Date();
@@ -10,7 +10,7 @@ function hour() {
 }
 
 function init() {
-    defTitre1();
+    defTitre3();
     datemodif();
     horloge.innerHTML = hour();
 }
@@ -22,14 +22,12 @@ function defTitre1() {
 
 function defTitre2() {
     var mes_h2 = document.getElementsByTagName('h2');
-   mes_h2[0].innerText = "defTitre 2"
+    mes_h2[0].innerText = "defTitre 2"
 }
 
 function defTitre3() {
-    var tags = document.getElementsByTagName('h2');
-    var title = tags.length >= 2 ? tags[1].innerHTML : name;
-
-    pageTitle.innerHTML = title;
+    var mes_h2 = document.getElementsByTagName('h2');
+    mes_h2[mes_h2.length-1].innerText = "defTitre 3"
 }
 
 function defTitre4() {
@@ -78,10 +76,10 @@ function datemodif() {
 document.getElementById("nbJours").addEventListener('click', function (ev) {
     var target = ev.target;
     var currDate = new Date();
-    var oldDate = new Date('2015-07-19');
+    var oldDate = new Date('2019-01-30');
 
     var diff = oldDate.getTime() - currDate.getTime();
-    target.innerHTML = target.innerHTML.replace("....", Math.round(diff / 1000 / 3600));
+    target.innerHTML = target.innerHTML.replace("....", Math.round(diff / 86400000));
 });
 
 function majHorloge1() {
@@ -106,4 +104,8 @@ function majGrafH() {
         } else node.innerHTML = node.innerHTML
             .concat('<img src="images/' + chars[c] + '.gif" />');
     }
+}
+
+function menu() {
+    
 }

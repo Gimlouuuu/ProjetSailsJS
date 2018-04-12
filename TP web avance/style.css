@@ -1,0 +1,8 @@
+aside > p {
+    display: none;
+}
+
+aside > h4 {
+    display: inline-block;
+    color: blue;
+}
